@@ -1,0 +1,27 @@
+[[redirects]]
+  from = "http://odysseyexchange.ru/*"
+  to = "https://odysseyexchange.ru/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.odysseyexchange.ru/*"
+  to = "https://odysseyexchange.ru/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.odysseyexchange.ru/*"
+  to = "https://odysseyexchange.ru/:splat"
+  status = 301
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+    Cache-Control = "public, max-age=31536000"
